@@ -1,5 +1,11 @@
 version: 0.0
-os: linux	 
+os: linux
+files:	
+  - source: /scripts/Dockerfile.txt	  
+    destination: /opt/codedeploy-agent/
+files:	
+  - source: /index.html	  
+    destination: /opt/codedeploy-agent/
 hooks:	
   BeforeInstall:	 
     - location: scripts/install_dependencies	   
