@@ -2,6 +2,6 @@ FROM ubuntu
 MAINTAINER krishna
 RUN apt-get update && apt-get install apache2 -y
 RUN service apache2 start
-ADD ../index.html /var/www/html
+ADD index.html /var/www/html
 ENTRYPOINT apachectl -D FOREGROUND
 EXPOSE 80
