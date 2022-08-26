@@ -8,11 +8,4 @@ sudo ./install auto
 sudo apt-get install docker.io -y
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
-sudo echo "FROM ubuntu
-MAINTAINER krishna
-RUN apt-get update && apt-get install apache2 -y
-RUN service apache2 start
-RUN echo "<h1>Hello World to Earth</h1>" > /var/www/html/index.html
-ENTRYPOINT apachectl -D FOREGROUND
-EXPOSE 80" > /opt/codedeploy-agent/Dockerfile.txt
-sudo docker build -t test:1 -f /opt/codedeploy-agent/Dockerfile.txt .
+
