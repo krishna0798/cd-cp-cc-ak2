@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo docker run -itd --name webapp -p 80:80 test:1
