@@ -1,11 +1,12 @@
 version: 0.0
 os: linux
-files:	
-  - source: /scripts/Dockerfile.txt	  
-    destination: /opt/codedeploy-agent/
-files:	
-  - source: /index.html	  
-    destination: /opt/codedeploy-agent/
+actions:
+- action: "Copy files from  backend/dev"
+  source_path: " /scripts/Dockerfile.txt"
+  target_path: "/opt/codedeploy-agent/"
+- action: "Copy files"
+  source_path: "/index.htm"
+  target_path: "/opt/codedeploy-agent/"
 hooks:	
   BeforeInstall:	 
     - location: scripts/install_dependencies	   
