@@ -8,4 +8,6 @@ sudo ./install auto
 sudo apt-get install docker.io -y
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
+sudo cp /scripts/Dockerfile.txt /opt/codedeploy-agent/
+sudo cp index.html /opt/codedeploy-agent/
 
